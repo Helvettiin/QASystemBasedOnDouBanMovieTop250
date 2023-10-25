@@ -1,9 +1,9 @@
 # QASystemBasedOnDouBanMovieTop250
 ## 1. 项目简介
 该项目是基于豆瓣电影Top250的问答系统，使用了豆瓣电影Top250的数据，使用python3.10进行编写，主要使用了flask框架，以及jieba、pyltp等工具进行自然语言处理。 项目的主要功能是对用户提出的问题进行解析，然后从数据库中提取答案，返回给用户，如下图所示：
-## ![image](F:\Vscode_Project\QASystemBasedOnDouBanMovieTop250\img\chat1.png)
-## ![image](F:\Vscode_Project\QASystemBasedOnDouBanMovieTop250\img\chat2.png)
-## ![image](F:\Vscode_Project\QASystemBasedOnDouBanMovieTop250\img\chat3.png)
+## ![image](https://github.com/Helvettiin/QASystemBasedOnDouBanMovieTop250/blob/main/img/chat1.png)
+## ![image](https://github.com/Helvettiin/QASystemBasedOnDouBanMovieTop250/blob/main/img/chat2.png)
+## ![image](https://github.com/Helvettiin/QASystemBasedOnDouBanMovieTop250/blob/main/img/chat3.png)
 ## 2. 项目结构
 ```
 ├── README.md
