@@ -52,6 +52,9 @@ class MovieQuestionPaser:
             elif question_type == 'release_date_movie':
                 sql = self.sql_transfer(question_type, entity_dict.get('release_date'))
 
+            elif question_type == 'movie_error':
+                sql = self.sql_transfer(question_type, entity_dict.get('movie_name'))
+
             if sql:
                 sql_['sql'] = sql
                 sqls.append(sql_)
@@ -103,6 +106,10 @@ class MovieQuestionPaser:
         # 查询某上映时间的电影
         elif question_type == 'release_date_movie':
             sql = ["MATCH (n:year)<-[:上映时间]-(s:name) where n.year = '{0}' return n.year, s.name".format(i) for i in entities]
+
+        # 查询某电影的错误
+        elif question_type == 'movie_error':
+            sql = ["MATCH (n:name)-[:剧情简介]->(s:synopsis) where n.name = '{0}' return n.name, s.synopsis".format(i) for i in entities]
 
         return sql
 

@@ -99,6 +99,12 @@ class MovieAnswerSearcher:
             SecondaryType = '电影'
             SecondaryName = 's.name'
 
+        elif question_type == 'movie_error':
+            PrimaryType = '电影'
+            PrimaryName = answers[0]['n.name']
+            SecondaryType = '剧情'
+            SecondaryName = 's.synopsis'
+
         else:
             return '出错, 未知问题类型'
 

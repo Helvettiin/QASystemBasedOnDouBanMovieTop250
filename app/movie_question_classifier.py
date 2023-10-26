@@ -118,6 +118,10 @@ class MovieQuestionClassifier:
             question_type = 'release_date_movie'
             question_types.append(question_type)
 
+        if self.check_words(self.movie_name_qwds, question) and 'movie_name' in types:
+            question_type = 'movie_error'
+            question_types.append(question_type)
+
     # 若没有查到相关的外部查询信息，那么则将该电影的描述信息返回
         if question_types == [] and 'movie_name' in types:
             question_types = ['movie_error']
